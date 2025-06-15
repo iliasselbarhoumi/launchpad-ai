@@ -18,6 +18,7 @@ import BillingPage from "./pages/Billing";
 import Pricing from "./components/Pricing";
 import FeedbackPage from "./pages/Feedback";
 import MvpPromptPage from "./pages/MvpPromptPage";
+import MvpPlanPage from "./pages/MvpPlanPage";
 
 const queryClient = new QueryClient();
 
@@ -139,6 +140,16 @@ const App = () => (
               <ProtectedRoute>
                 <Layout>
                   <MvpPromptPage />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/ideas/:ideaId/mvp-plan"
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <MvpPlanPage />
                 </Layout>
               </ProtectedRoute>
             }

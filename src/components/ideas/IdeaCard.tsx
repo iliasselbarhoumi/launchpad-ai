@@ -29,6 +29,10 @@ const IdeaCard: React.FC<IdeaCardProps> = ({ idea, view, index }) => {
     navigate(`/ideas/${idea.id}/mvp-prompt`);
   };
 
+  const handleBusinessPlanClick = () => {
+    navigate(`/ideas/${idea.id}/mvp-plan`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -83,7 +87,11 @@ const IdeaCard: React.FC<IdeaCardProps> = ({ idea, view, index }) => {
                 <LovableIcon />
                 MVP Prompt
               </Button>
-              <Button size="sm" className="press-effect">
+              <Button
+                size="sm"
+                className="press-effect"
+                onClick={handleBusinessPlanClick}
+              >
                 <Zap className="h-4 w-4" />
                 Generate Business Plan
               </Button>
