@@ -2,6 +2,18 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+  AlertDialogFooter,
+  AlertDialogHeader,
+} from "@/components/ui/alert-dialog";
+import { toast } from "sonner";
 
 const plans = [
   {
@@ -58,10 +70,16 @@ const BillingPage = () => {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
     "monthly"
   );
+  const [earlyAccessList, setEarlyAccessList] = useState<string[]>([]);
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const plansRef = useRef<HTMLDivElement>(null);
   const offerRef = useRef<HTMLDivElement>(null);
+
+  const handleConfirmEarlyAccess = (planName: string) => {
+    setEarlyAccessList((prev) => [...prev, planName]);
+    toast.success(`You're on the early access list for the ${planName} plan!`);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -205,25 +223,88 @@ const BillingPage = () => {
                     ))}
                   </ul>
 
-                  <Button
-                    size="lg"
-                    variant={
-                      plan.isCurrent || plan.isMostPopular
-                        ? "default"
-                        : "outline"
+                  {(() => {
+                    const isOnWaitingList = earlyAccessList.includes(plan.name);
+
+                    if (plan.isCurrent) {
+                      return (
+                        <Button
+                          size="lg"
+                          className="w-full press-effect bg-slate-400 text-white hover:bg-slate-400 dark:bg-slate-700 dark:text-slate-100 cursor-not-allowed"
+                          disabled
+                        >
+                          {plan.cta}
+                        </Button>
+                      );
                     }
-                    className={cn(
-                      "w-full press-effect",
-                      plan.isCurrent &&
-                        "bg-slate-400 text-white hover:bg-slate-400 dark:bg-slate-700 dark:text-slate-100 cursor-not-allowed",
-                      plan.name === "Ultimate" &&
-                        !plan.isCurrent &&
-                        "text-launchpad-purple border-launchpad-purple hover:bg-launchpad-purple/10 hover:text-launchpad-purple dark:text-launchpad-purple-light dark:border-launchpad-purple-light dark:hover:bg-launchpad-purple/20"
-                    )}
-                    disabled={plan.isCurrent}
-                  >
-                    {plan.cta}
-                  </Button>
+
+                    if (isOnWaitingList) {
+                      return (
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="w-full press-effect"
+                          disabled
+                        >
+                          <Check className="w-5 h-5 mr-2" />
+                          You're on the list!
+                        </Button>
+                      );
+                    }
+
+                    if (plan.name === "Pro" || plan.name === "Ultimate") {
+                      return (
+                        <AlertDialog>
+                          <AlertDialogTrigger asChild>
+                            <Button
+                              size="lg"
+                              variant={
+                                plan.isMostPopular ? "default" : "outline"
+                              }
+                              className={cn(
+                                "w-full press-effect",
+                                plan.name === "Ultimate" &&
+                                  !plan.isCurrent &&
+                                  "text-launchpad-purple border-launchpad-purple hover:bg-launchpad-purple/10 hover:text-launchpad-purple dark:text-launchpad-purple-light dark:border-launchpad-purple-light dark:hover:bg-launchpad-purple/20"
+                              )}
+                            >
+                              Get Early Access
+                            </Button>
+                          </AlertDialogTrigger>
+                          <AlertDialogContent>
+                            <AlertDialogHeader>
+                              <AlertDialogTitle>
+                                Join Early Access for {plan.name}?
+                              </AlertDialogTitle>
+                              <AlertDialogDescription>
+                                We'll notify you when this plan is available. No
+                                commitment necessary.
+                              </AlertDialogDescription>
+                            </AlertDialogHeader>
+                            <AlertDialogFooter>
+                              <AlertDialogCancel>Cancel</AlertDialogCancel>
+                              <AlertDialogAction
+                                onClick={() =>
+                                  handleConfirmEarlyAccess(plan.name)
+                                }
+                              >
+                                Yes, notify me
+                              </AlertDialogAction>
+                            </AlertDialogFooter>
+                          </AlertDialogContent>
+                        </AlertDialog>
+                      );
+                    }
+
+                    return (
+                      <Button
+                        size="lg"
+                        variant={plan.isMostPopular ? "default" : "outline"}
+                      >
+                        {plan.cta}
+                      </Button>
+                    );
+                  })()}
                 </div>
               ))}
             </div>

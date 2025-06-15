@@ -38,6 +38,7 @@ import {
 } from "@/components/ui/card";
 import { FeedbackRating } from "@/components/FeedbackRating";
 import { cn } from "@/lib/utils";
+import { FeedbackFormData, submitFeedback } from "@/api/feedback";
 
 const feedbackSchema = z
   .object({
@@ -105,21 +106,35 @@ const FeedbackPage = () => {
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(feedbackSchema),
     defaultValues: {
+      rating: 5,
       comments: "",
       other_type_details: "",
     },
   });
 
   const feedbackType = form.watch("type");
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  function onSubmit(data: FeedbackFormValues) {
-    console.log(data);
-    toast({
-      title: "Feedback Submitted!",
-      description:
-        "Thank you for your feedback. We appreciate you taking the time to help us improve.",
-    });
-    form.reset();
+  async function onSubmit(data: FeedbackFormData) {
+    try {
+      console.log(data);
+      setIsSubmitting(true);
+      await submitFeedback(data);
+      toast({
+        title: "Feedback Submitted!",
+        description:
+          "Thank you for your feedback. We appreciate you taking the time to help us improve.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit feedback. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -213,14 +228,21 @@ const FeedbackPage = () => {
                       <FeedbackRating
                         value={field.value}
                         onChange={field.onChange}
+                        type={form.watch("type") || ""}
+                        comments={form.watch("comments") || ""}
                       />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full" size="lg">
-                Submit Feedback
+              <Button
+                type="submit"
+                className="w-full"
+                size="lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit Feedback"}
               </Button>
             </form>
           </Form>

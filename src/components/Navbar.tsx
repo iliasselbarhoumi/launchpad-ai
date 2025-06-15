@@ -10,7 +10,7 @@ import {
   WandSparkles,
   X,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -31,6 +31,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, isSignedIn } = useUser();
   const { userMock } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -138,7 +139,12 @@ const Navbar = () => {
                         </div>
                       </div>
                     ) : null}
-                    <Button className="w-full mt-4">
+                    <Button
+                      className="w-full mt-4"
+                      onClick={() => {
+                        navigate("/billing");
+                      }}
+                    >
                       <WandSparkles />
                       Buy Credits
                     </Button>

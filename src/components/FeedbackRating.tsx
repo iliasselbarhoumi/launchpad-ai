@@ -1,24 +1,32 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Slider } from "@/components/ui/slider";
+import { toast } from "sonner";
 
 interface FeedbackRatingProps {
   value?: number;
   onChange: (value: number) => void;
+  type: string;
+  comments: string;
 }
 
 const ratings = [
-  { value: 1, label: "Terrible", emoji: "😠", colorHsl: "0 84% 60%" },
-  { value: 2, label: "Bad", emoji: "😟", colorHsl: "25 95% 53%" },
-  { value: 3, label: "Okay", emoji: "😐", colorHsl: "45 93% 47%" },
-  { value: 4, label: "Good", emoji: "😊", colorHsl: "142 71% 45%" },
-  { value: 5, label: "Amazing!", emoji: "🤩", colorHsl: "333 83% 54%" },
+  { value: 1, label: "Terrible", emoji: "😠", colorHsl: "0 84% 60%" }, // Red
+  { value: 2, label: "Bad", emoji: "😟", colorHsl: "338 84% 61%" },
+  { value: 3, label: "Okay", emoji: "😐", colorHsl: "315 85% 63%" },
+  { value: 4, label: "Good", emoji: "😊", colorHsl: "293 85% 64%" },
+  { value: 5, label: "Amazing!", emoji: "🤩", colorHsl: "270 85% 65%" }, // Purple
 ];
 
-const FeedbackRating = ({ value, onChange }: FeedbackRatingProps) => {
-  const displayValue = value ?? 3;
+const FeedbackRating = ({
+  value,
+  onChange,
+  type,
+  comments,
+}: FeedbackRatingProps) => {
+  const displayValue = value ?? 5;
   const selectedRating =
-    ratings.find((r) => r.value === displayValue) || ratings[2];
+    ratings.find((r) => r.value === displayValue) || ratings[4];
 
   const labelText =
     value !== undefined ? selectedRating.label : "How was your experience?";
@@ -63,7 +71,7 @@ const FeedbackRating = ({ value, onChange }: FeedbackRatingProps) => {
         {labelText}
       </span>
       <Slider
-        defaultValue={[3]}
+        defaultValue={[5]}
         value={value !== undefined ? [value] : undefined}
         onValueChange={(vals) => onChange(vals[0])}
         min={1}

@@ -95,13 +95,32 @@ yarn dev
 ## 🏗️ Project Structure
 
 ```
-src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── hooks/         # Custom React hooks
-├── lib/           # Utility functions
-├── data/          # Mock data and constants
-└── types/         # TypeScript type definitions
+launchpad-ai/
+├── src/
+│   ├── api/           # API endpoints and services
+│   ├── components/    # Reusable UI components
+│   ├── data/         # Mock data and constants
+│   ├── hooks/        # Custom React hooks
+│   ├── lib/          # Utility functions and database connection
+│   ├── pages/        # Page components
+│   ├── types/        # TypeScript type definitions
+│   ├── App.tsx       # Main application component
+│   ├── App.css       # Application styles
+│   ├── index.css     # Global styles
+│   ├── main.tsx      # Application entry point
+│   ├── middleware.ts # Application middleware
+│   └── vite-env.d.ts # Vite environment types
+├── public/           # Static assets
+├── index.html        # HTML entry point
+├── vite.config.ts    # Vite configuration
+├── tsconfig.json     # TypeScript configuration
+├── tsconfig.app.json # TypeScript app configuration
+├── tsconfig.node.json# TypeScript node configuration
+├── tailwind.config.ts# Tailwind CSS configuration
+├── postcss.config.js # PostCSS configuration
+├── components.json   # shadcn/ui components configuration
+├── eslint.config.js  # ESLint configuration
+└── package.json      # Project dependencies and scripts
 ```
 
 ## 🛠️ Technology Stack
