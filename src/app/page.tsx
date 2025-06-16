@@ -1,13 +1,9 @@
+"use client";
 import React, { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import ProblemStatement from "@/components/ProblemStatement";
-import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
-import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const Index = () => {
   const router = useRouter();
@@ -37,11 +33,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-launchpad-dark-blue overflow-hidden">
       <main className="pt-16">
-        <Hero />
-        <ProblemStatement />
-        <HowItWorks />
-        <Testimonials />
-
         <section className="py-16 px-6" id="cta">
           <div className="container mx-auto max-w-5xl">
             <div className="rounded-2xl overflow-hidden relative bg-launchpad-dark-blue">

@@ -12,7 +12,7 @@ import {
   Ellipsis,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import {
   Form,
   FormControl,
@@ -20,16 +20,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/app/components/ui/form";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
+} from "@/app/components/ui/select";
+import { Textarea } from "@/app/components/ui/textarea";
+import { Input } from "@/app/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
   Card,
@@ -37,10 +37,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { FeedbackRating } from "@/components/FeedbackRating";
+} from "@/app/components/ui/card";
+import { FeedbackRating } from "@/app/components/FeedbackRating";
 import { cn } from "@/lib/utils";
 import { FeedbackFormData, submitFeedback } from "@/api/feedback";
+import Link from "next/link";
 
 const feedbackSchema = z
   .object({
@@ -104,7 +105,7 @@ const feedbackTypes = [
   { value: "other", label: "Other", icon: Ellipsis, color: "text-gray-500" },
 ];
 
-const FeedbackPage = () => {
+export default function FeedbackPage() {
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(feedbackSchema),
     defaultValues: {
@@ -140,7 +141,15 @@ const FeedbackPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
+        <h1 className="text-4xl font-bold mb-8">Feedback Page</h1>
+        <div className="flex gap-4">
+          <Link href="/">
+            <Button>Back to Home</Button>
+          </Link>
+        </div>
+      </div>
       <Card className="w-full max-w-lg shadow-lg animate-fade-in">
         <CardHeader>
           <CardTitle className="text-3xl font-bold tracking-tight">
@@ -250,8 +259,6 @@ const FeedbackPage = () => {
           </Form>
         </CardContent>
       </Card>
-    </div>
+    </main>
   );
-};
-
-export default FeedbackPage;
+}
