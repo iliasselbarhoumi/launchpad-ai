@@ -11,7 +11,7 @@ import {
   WandSparkles,
   X,
 } from "lucide-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import {
   Avatar,
   AvatarFallback,
@@ -30,7 +30,7 @@ import { SignInButton, SignOutButton, useUser } from "@clerk/clerk-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { Badge } from "./ui/badge";
 import { useAuth } from "@/hooks/use-auth";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +62,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <img
                 src="/lovable-uploads/ce207080-f6c2-430d-9621-79d32ab08655.png"
                 alt="Launchpad.ai Logo"
@@ -76,19 +76,19 @@ const Navbar = () => {
             {isSignedIn ? (
               <>
                 <Link
-                  to="/dashboard"
+                  href="/dashboard"
                   className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
                 >
                   Dashboard
                 </Link>
                 <Link
-                  to="/ideas/list"
+                  href="/ideas/list"
                   className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
                 >
                   Ideas
                 </Link>
                 <Link
-                  to="/mvp-plans"
+                  href="/mvp-plans"
                   className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
                 >
                   MVP Plans
@@ -178,13 +178,13 @@ const Navbar = () => {
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
-                      <Link to="/profile">Profile</Link>
+                      <Link href="/profile">Profile</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link to="/billing">Billing</Link>
+                      <Link href="/billing">Billing</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link to="/feedback">Feedback</Link>
+                      <Link href="/feedback">Feedback</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem disabled>Settings</DropdownMenuItem>
                     <DropdownMenuSeparator />
@@ -239,14 +239,14 @@ const Navbar = () => {
             {isSignedIn ? (
               <>
                 <Link
-                  to="/profile"
+                  href="/profile"
                   onClick={closeMobileMenu}
                   className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100"
                 >
                   Dashboard
                 </Link>
                 <Link
-                  to="/ideas/list"
+                  href="/ideas/list"
                   onClick={closeMobileMenu}
                   className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100"
                 >

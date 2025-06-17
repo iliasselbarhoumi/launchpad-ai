@@ -2,8 +2,12 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Unplug, ArrowRight } from "lucide-react";
-
+import { usePathname } from "next/navigation";
+import { Button } from "./components/ui/button";
+import Link from "next/link";
 const NotFound = () => {
+  const pathname = usePathname();
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
       <motion.div
@@ -38,14 +42,14 @@ const NotFound = () => {
         <p className="text-slate-500 mb-8 max-w-md mx-auto">
           It seems you've ventured into uncharted territory. The page at{" "}
           <code className="bg-slate-100 text-rose-500 p-1 rounded-md text-sm">
-            {location.pathname}
+            {pathname}
           </code>{" "}
           could not be found.
         </p>
 
-        {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="press-effect w-full sm:w-auto">
-            <Link to="/dashboard">Return to Dashboard</Link>
+            <Link href="/dashboard">Return to Dashboard</Link>
           </Button>
           <Button
             asChild
@@ -53,12 +57,12 @@ const NotFound = () => {
             size="lg"
             className="press-effect w-full sm:w-auto"
           >
-            <Link to="/ideas/list">
+            <Link href="/ideas/list">
               Generate Ideas
               <ArrowRight />
             </Link>
           </Button>
-        </div> */}
+        </div>
       </motion.div>
     </div>
   );

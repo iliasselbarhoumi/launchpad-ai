@@ -12,7 +12,7 @@ import { AssessmentScores, getArchetype } from "@/lib/assessmentUtils";
 import ResultRadarChart from "./ResultRadarChart";
 import SectionBreakdown from "./SectionBreakdown";
 import { Button } from "../ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface ProfileDisplayProps {
   scores: AssessmentScores;
@@ -74,7 +74,7 @@ const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ scores }) => {
                 size="lg"
                 className="bg-white font-bold press-effect hover-lift hover:shadow-lg transition-all duration-300 border border-slate-200 hover:bg-slate-100"
               >
-                <Link to="/profile">
+                <Link href="/profile">
                   <span className="text-black">Start Your Journey with</span>{" "}
                   <span className="bg-gradient-to-r from-launchpad-red to-launchpad-purple bg-clip-text text-transparent">
                     Launchpad AI
