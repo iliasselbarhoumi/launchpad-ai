@@ -14,11 +14,11 @@ import SectionBreakdown from "./SectionBreakdown";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-interface ProfileDisplayProps {
+interface ResultDisplayProps {
   scores: AssessmentScores;
 }
 
-const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ scores }) => {
+const ResultDisplay: React.FC<ResultDisplayProps> = ({ scores }) => {
   const archetype = getArchetype(scores.totalPercentage);
 
   const descriptionParts = archetype.description.split("Launcherpad");
@@ -94,4 +94,4 @@ const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ scores }) => {
   );
 };
 
-export default ProfileDisplay;
+export default ResultDisplay;

@@ -31,7 +31,7 @@ const IdeaCard: React.FC<IdeaCardProps> = ({ idea, view, index }) => {
   };
 
   const handleBusinessPlanClick = () => {
-    navigate(`/ideas/${idea.id}/mvp-plan`);
+    router.push(`/ideas/${idea.id}/mvp-plan`);
   };
 
   return (

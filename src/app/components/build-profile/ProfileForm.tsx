@@ -86,7 +86,6 @@ const ProfileForm = () => {
     setIsSubmitting(true);
     console.log("Profile Data:", data);
 
-    // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
@@ -94,7 +93,6 @@ const ProfileForm = () => {
         description: "Your entrepreneurial profile has been saved.",
       });
       router.push("/profile");
-      // Potentially navigate away or show a success message
     }, 1500);
   };
 

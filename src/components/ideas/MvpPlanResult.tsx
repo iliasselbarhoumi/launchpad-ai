@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Idea } from "./IdeaCard";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/app/components/ui/card";
 import {
   FileText,
   Target,
@@ -30,6 +29,7 @@ import {
   RadialBar,
 } from "recharts";
 import { cn } from "@/lib/utils";
+import { Idea } from "@/app/components/ideas/IdeaCard";
 
 export interface Plan {
   businessConcept: {

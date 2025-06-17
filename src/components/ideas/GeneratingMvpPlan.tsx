@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@/app/components/ui/progress";
 
 interface GeneratingMvpPlanProps {
   progress: number;

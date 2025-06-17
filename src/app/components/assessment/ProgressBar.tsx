@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Progress } from "@/app/components/ui/progress";
 
 interface ProgressBarProps {
   current: number;
@@ -18,12 +19,10 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ current, total }) => {
           {Math.round(progress)}% Complete
         </span>
       </div>
-      <div className="progress-bar">
-        <div
-          className="progress-fill"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
+      <Progress
+        value={progress}
+        className="h-2 [&>div]:bg-gradient-to-r [&>div]:from-launchpad-purple [&>div]:to-launchpad-purple-light"
+      />
     </div>
   );
 };

@@ -1,13 +1,15 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { mockIdeas } from "@/data/ideas";
+import { Idea } from "@/app/components/ideas/IdeaCard";
+import { Button } from "@/app/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Plan } from "@/components/ideas/MvpPlanResult";
 import MvpPlanResult from "@/components/ideas/MvpPlanResult";
 import GeneratingMvpPlan from "@/components/ideas/GeneratingMvpPlan";
-import { Idea } from "./components/ideas/IdeaCard";
-import { Button } from "./components/ui/button";
+import { useRouter } from "next/navigation";
 
 // This would be a call to an AI service in a real app
 const generateBusinessPlanForIdea = (idea: Idea): Promise<Plan> => {
@@ -136,7 +138,7 @@ const generateBusinessPlanForIdea = (idea: Idea): Promise<Plan> => {
 
 const MvpPlanPage = () => {
   const { ideaId } = useParams<{ ideaId: string }>();
-  const navigate = useNavigate();
+  const router = useRouter();
   const [idea, setIdea] = useState<Idea | null>(null);
   const [isGenerating, setIsGenerating] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -147,9 +149,9 @@ const MvpPlanPage = () => {
     if (foundIdea) {
       setIdea(foundIdea);
     } else {
-      navigate("/generate-ideas");
+      router.push("/ideas/list");
     }
-  }, [ideaId, navigate]);
+  }, [ideaId, router]);
 
   useEffect(() => {
     let interval: NodeJS.Timeout | undefined;
@@ -179,7 +181,7 @@ const MvpPlanPage = () => {
     <div className="min-h-screen bg-slate-50">
       <main className="max-w-7xl mx-auto p-4 sm:p-6 pt-28">
         <div className="mb-6">
-          <Button variant="ghost" onClick={() => navigate("/generate-ideas")}>
+          <Button variant="ghost" onClick={() => router.push("/ideas/list")}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Ideas
           </Button>
