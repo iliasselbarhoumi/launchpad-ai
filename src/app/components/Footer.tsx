@@ -14,10 +14,10 @@ const Footer = () => {
             className="mb-6 md:mb-0"
           >
             <h3 className="text-2xl font-bold text-launchpad-dark-blue">
-              Launchpad.ai
+              Launcherpad
             </h3>
             <p className="text-sm text-gray-600 mt-2">
-              © {new Date().getFullYear()} Launchpad.ai. All rights reserved.
+              © {new Date().getFullYear()} Launcherpad. All rights reserved.
             </p>
           </motion.div>
 

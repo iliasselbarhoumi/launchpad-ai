@@ -21,13 +21,13 @@ interface ProfileDisplayProps {
 const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ scores }) => {
   const archetype = getArchetype(scores.totalPercentage);
 
-  const descriptionParts = archetype.description.split("Launchpad AI");
+  const descriptionParts = archetype.description.split("Launcherpad");
   const descriptionWithHighlight =
     descriptionParts.length > 1 ? (
       <>
         {descriptionParts[0]}
         <span className="font-bold bg-gradient-to-r from-launchpad-red to-launchpad-purple bg-clip-text text-transparent">
-          Launchpad AI
+          Launcherpad
         </span>
         {descriptionParts[1]}
       </>
@@ -77,7 +77,7 @@ const ProfileDisplay: React.FC<ProfileDisplayProps> = ({ scores }) => {
                 <Link href="/profile">
                   <span className="text-black">Start Your Journey with</span>{" "}
                   <span className="bg-gradient-to-r from-launchpad-red to-launchpad-purple bg-clip-text text-transparent">
-                    Launchpad AI
+                    Launcherpad
                   </span>
                 </Link>
               </Button>

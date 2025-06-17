@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import { Check, Zap } from "lucide-react";
 
@@ -177,8 +178,8 @@ const Pricing = () => {
                 See How Launcherpad Works
               </h3>
               <p className="text-white/70 max-w-xl">
-                Get a personalized demo and see how Launcherpad can transform your
-                outbound strategy.
+                Get a personalized demo and see how Launcherpad can transform
+                your outbound strategy.
               </p>
             </div>
             <div>

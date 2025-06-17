@@ -96,19 +96,19 @@ export const getArchetype = (
     return {
       title: "High Potential Entrepreneur",
       description:
-        "You possess many of the core traits and a solid foundation for entrepreneurial success. Launchpad AI will help you channel your strengths into actionable plans.",
+        "You possess many of the core traits and a solid foundation for entrepreneurial success. Launcherpad will help you channel your strengths into actionable plans.",
     };
   }
   if (percentage >= 55) {
     return {
       title: "Aspiring Entrepreneur",
       description:
-        "You have strong potential and a clear desire to build. Launchpad AI will help you identify and develop key areas to maximize your chances of success.",
+        "You have strong potential and a clear desire to build. Launcherpad will help you identify and develop key areas to maximize your chances of success.",
     };
   }
   return {
     title: "Explorer / Growth Seeker",
     description:
-      "You're clearly curious about entrepreneurship! Your results suggest some areas where focused learning and mindset shifts could significantly boost your readiness. Launchpad AI will guide you through these foundational steps.",
+      "You're clearly curious about entrepreneurship! Your results suggest some areas where focused learning and mindset shifts could significantly boost your readiness. Launcherpad will guide you through these foundational steps.",
   };
 };

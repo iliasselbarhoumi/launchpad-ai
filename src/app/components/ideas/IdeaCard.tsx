@@ -5,7 +5,7 @@ import { Card, CardTitle } from "@/app/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "@/app/components/ui/button";
 import { Zap } from "lucide-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import LovableIcon from "../icons/LovableIcon";
 
 export interface Idea {
@@ -26,6 +26,7 @@ const IdeaCard: React.FC<IdeaCardProps> = ({ idea, view, index }) => {
   const router = useRouter();
 
   const handleMvpPromptClick = () => {
+    console.log(`/ideas/${idea.id}/mvp-prompt`);
     router.push(`/ideas/${idea.id}/mvp-prompt`);
   };
 

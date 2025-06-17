@@ -12,7 +12,7 @@ import Step2Resources from "./Step2";
 import Step3Vision from "./Step3";
 import { ProfileFormData, profileSchema } from "@/lib/profileSchema";
 import Stepper from "./Stepper";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const steps = [
   {

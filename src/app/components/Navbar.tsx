@@ -64,9 +64,9 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <img
-                src="/lovable-uploads/ce207080-f6c2-430d-9621-79d32ab08655.png"
-                alt="Launchpad.ai Logo"
-                className="h-8 md:h-10"
+                src="/Logo_without_BG_Black.png"
+                alt="Launcherpad Logo"
+                className="h-10 md:h-10"
               />
             </Link>
           </div>

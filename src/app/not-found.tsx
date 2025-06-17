@@ -51,17 +51,6 @@ const NotFound = () => {
           <Button asChild size="lg" className="press-effect w-full sm:w-auto">
             <Link href="/dashboard">Return to Dashboard</Link>
           </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="press-effect w-full sm:w-auto"
-          >
-            <Link href="/ideas/list">
-              Generate Ideas
-              <ArrowRight />
-            </Link>
-          </Button>
         </div>
       </motion.div>
     </div>
