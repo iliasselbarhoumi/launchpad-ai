@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Idea } from "@/components/ideas/IdeaCard";
+import type { Idea } from "@/app/components/ideas/IdeaCard";
 import { mockIdeas } from "@/data/ideas";
 
 export const useJourney = () => {

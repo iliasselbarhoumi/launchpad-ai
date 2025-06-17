@@ -1,4 +1,4 @@
-import { Idea } from "@/components/ideas/IdeaCard";
+import { Idea } from "@/app/components/ideas/IdeaCard";
 
 export const mockIdeas: Idea[] = [
   {

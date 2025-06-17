@@ -1,6 +1,6 @@
-# 🚀 Launchpad AI
+# 🚀 Launcherpad
 
-Launchpad AI is an innovative platform that helps entrepreneurs and developers transform their ideas into viable Micro-SaaS products. Using AI-powered tools and a structured approach, Launchpad guides you through the entire journey from idea generation to MVP development.
+Launcherpad is an innovative platform that helps entrepreneurs and developers transform their ideas into viable Micro-SaaS products. Using AI-powered tools and a structured approach, Launchpad guides you through the entire journey from idea generation to MVP development.
 
 ## 🌟 Features
 
@@ -143,7 +143,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Thanks to all contributors who have helped shape Launchpad AI
+- Thanks to all contributors who have helped shape Launcherpad
 - Special thanks to the open-source community for the amazing tools and libraries
 
 ## 📞 Support
@@ -156,4 +156,4 @@ If you need help or have questions, please:
 
 ---
 
-Made with ❤️ by the Launchpad AI Team
+Made with ❤️ by the Launcherpad Team
