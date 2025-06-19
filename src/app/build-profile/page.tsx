@@ -9,8 +9,8 @@ const BuildProfile = () => {
         <div className="w-full max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-display font-bold text-slate-800">
-              <span className="bg-gradient-to-r from-launchpad-red to-launchpad-purple bg-clip-text text-transparent">
-                Launchpad AI
+              <span className="bg-gradient-to-r from-launcherpad-red to-launcherpad-purple bg-clip-text text-transparent">
+                Launcherpad
               </span>
               <span>: Your Entrepreneurial Profile</span>
             </h1>

@@ -42,7 +42,7 @@ const SectionTransition: React.FC<SectionTransitionProps> = ({
       className="text-center flex flex-col items-center justify-center p-8 bg-white rounded-2xl shadow-xl shadow-slate-200/60"
     >
       {!isFirstSection && (
-        <CheckCircle2 className="w-16 h-16 text-launchpad-green mb-4" />
+        <CheckCircle2 className="w-16 h-16 text-launcherpad-green mb-4" />
       )}
       <h2 className="text-2xl font-display font-bold text-slate-800 mb-2">
         {isFirstSection ? "Ready to Start?" : "Section Complete!"}
@@ -67,7 +67,7 @@ const SectionTransition: React.FC<SectionTransitionProps> = ({
       <Button
         onClick={onContinue}
         size="lg"
-        className="bg-launchpad-purple hover:bg-launchpad-purple/90"
+        className="bg-launcherpad-purple hover:bg-launcherpad-purple/90"
       >
         {isFirstSection ? "Begin Section" : "Continue"}
         <ArrowRight className="ml-2 h-5 w-5" />

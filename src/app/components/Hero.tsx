@@ -4,6 +4,7 @@ import { ArrowRight, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import PlatformDemo from "./hero/PlatformDemo";
 import StatsSection from "./hero/StatsSection";
+import Link from "next/link";
 
 const Hero = () => {
   const statsRef = useRef<HTMLDivElement>(null);
@@ -43,7 +44,7 @@ const Hero = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-launchpad-purple/10 text-launchpad-purple mb-6"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-launcherpad-purple/10 text-launcherpad-purple mb-6"
           >
             <span className="text-sm font-medium font-inter tracking-wide">
               🚀 Democratizing Entrepreneurship
@@ -52,7 +53,7 @@ const Hero = () => {
 
           <motion.h1
             variants={itemVariants}
-            className="font-inter font-bold text-4xl md:text-5xl lg:text-7xl tracking-tight max-w-4xl mx-auto mb-6 text-launchpad-dark-blue leading-[1.1]"
+            className="font-inter font-bold text-4xl md:text-5xl lg:text-7xl tracking-tight max-w-4xl mx-auto mb-6 text-launcherpad-dark-blue leading-[1.1]"
           >
             From <span className="text-[#EA384C] font-extrabold">Employee</span>{" "}
             to{" "}
@@ -61,7 +62,7 @@ const Hero = () => {
 
           <motion.p
             variants={itemVariants}
-            className="font-inter text-xl text-launchpad-dark-blue/80 max-w-3xl mx-auto mb-8 leading-relaxed"
+            className="font-inter text-xl text-launcherpad-dark-blue/80 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             AI brings your vision to life, with personalized insights every step
             of the way
@@ -71,13 +72,13 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16"
           >
-            <a
-              href="#cta"
+            <Link
+              href="/assessment"
               className="button-primary flex items-center group font-inter font-medium"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
             <a href="#how-it-works" className="button-outline font-inter">
               See How It Works
             </a>

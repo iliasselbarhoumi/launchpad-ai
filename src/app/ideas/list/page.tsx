@@ -133,7 +133,7 @@ const GenerateIdeas = () => {
           className="mb-8"
         >
           <h1 className="text-3xl md:text-4xl font-display font-bold gradient-text mb-4">
-            Your Idea Launchpad
+            Your Idea Launcherpad
           </h1>
           <div className="bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex-shrink-0 font-semibold text-slate-700 flex items-center gap-2">
@@ -228,9 +228,9 @@ const GenerateIdeas = () => {
               exit={{ opacity: 0 }}
               className="text-center py-20 bg-white rounded-xl border border-slate-200/80"
             >
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-launchpad-purple/10 to-launchpad-purple-light/10">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-launcherpad-purple/10 to-launcherpad-purple-light/10">
                 <Lightbulb
-                  className="w-10 h-10 text-launchpad-purple"
+                  className="w-10 h-10 text-launcherpad-purple"
                   strokeWidth={1.5}
                 />
               </div>

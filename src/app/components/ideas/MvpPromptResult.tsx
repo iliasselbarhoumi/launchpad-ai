@@ -37,7 +37,7 @@ const MvpPromptResult: React.FC<MvpPromptResultProps> = ({ prompt, idea }) => {
       <Card className="w-full max-w-3xl mx-auto shadow-lg">
         <CardHeader>
           <CardTitle className="flex items-center gap-3 font-display text-2xl">
-            <span className="w-8 h-8 rounded-md flex items-center justify-center bg-gradient-to-br from-launchpad-purple/10 to-launchpad-purple-light/10 text-launchpad-purple flex-shrink-0">
+            <span className="w-8 h-8 rounded-md flex items-center justify-center bg-gradient-to-br from-launcherpad-purple/10 to-launcherpad-purple-light/10 text-launcherpad-purple flex-shrink-0">
               <LovableIcon className="w-5 h-5" />
             </span>
             <span>MVP Prompt for: {idea.title}</span>

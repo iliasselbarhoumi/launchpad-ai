@@ -116,7 +116,7 @@ const BillingPage = () => {
               ref={sectionRef}
               className="max-w-3xl mx-auto text-center opacity-0 translate-y-8 transition-all duration-700"
             >
-              <div className="inline-block bg-launchpad-purple/10 text-launchpad-purple font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
+              <div className="inline-block bg-launcherpad-purple/10 text-launcherpad-purple font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
                 Pricing
               </div>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-800 dark:text-white mb-6">
@@ -170,12 +170,12 @@ const BillingPage = () => {
                     "bg-white dark:bg-slate-800/50 rounded-2xl border p-8 shadow-sm transition-all duration-300 relative flex flex-col",
                     "hover:shadow-xl hover:-translate-y-1",
                     plan.isMostPopular
-                      ? "border-launchpad-purple shadow-xl shadow-launchpad-purple/10 hover:shadow-launchpad-purple/20"
+                      ? "border-launcherpad-purple shadow-xl shadow-launcherpad-purple/10 hover:shadow-launcherpad-purple/20"
                       : "border-slate-200 dark:border-slate-700 hover:shadow-slate-500/10"
                   )}
                 >
                   {plan.isMostPopular && (
-                    <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-launchpad-purple text-white font-semibold px-4 py-1 rounded-full text-sm uppercase tracking-wider">
+                    <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-launcherpad-purple text-white font-semibold px-4 py-1 rounded-full text-sm uppercase tracking-wider">
                       Most Popular
                     </div>
                   )}
@@ -266,7 +266,7 @@ const BillingPage = () => {
                                 "w-full press-effect",
                                 plan.name === "Ultimate" &&
                                   !plan.isCurrent &&
-                                  "text-launchpad-purple border-launchpad-purple hover:bg-launchpad-purple/10 hover:text-launchpad-purple dark:text-launchpad-purple-light dark:border-launchpad-purple-light dark:hover:bg-launchpad-purple/20"
+                                  "text-launcherpad-purple border-launcherpad-purple hover:bg-launcherpad-purple/10 hover:text-launcherpad-purple dark:text-launcherpad-purple-light dark:border-launcherpad-purple-light dark:hover:bg-launcherpad-purple/20"
                               )}
                             >
                               Get Early Access
@@ -309,35 +309,6 @@ const BillingPage = () => {
                 </div>
               ))}
             </div>
-
-            {/* <div
-              ref={offerRef}
-              className="mt-20 bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-700/50 dark:to-slate-800/50 rounded-2xl p-8 md:p-12 opacity-0 translate-y-8 transition-all duration-700 delay-[450ms]"
-            >
-              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="mb-6 md:mb-0 text-center md:text-left">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm font-medium mb-4">
-                    <Zap className="w-4 h-4 mr-2" />
-                    <span>Ready to Launch?</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    Start Your Entrepreneurial Journey Today
-                  </h3>
-                  <p className="text-white/70 max-w-xl">
-                    Pick a plan and get instant access to the tools that will
-                    turn your idea into a reality.
-                  </p>
-                </div>
-                <div>
-                  <Button
-                    size="lg"
-                    className="whitespace-nowrap bg-white text-slate-800 hover:bg-slate-200 dark:bg-white dark:text-slate-800 dark:hover:bg-slate-200 press-effect"
-                  >
-                    Get Started Now
-                  </Button>
-                </div>
-              </div>
-            </div> */}
           </div>
         </section>
       </main>

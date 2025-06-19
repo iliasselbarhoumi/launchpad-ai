@@ -35,7 +35,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-launchpad-dark-blue overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-launcherpad-dark-blue overflow-hidden">
       <main className="pt-16">
         <Hero />
         <ProblemStatement />
@@ -44,7 +44,7 @@ const Index = () => {
 
         <section className="py-16 px-6" id="cta">
           <div className="container mx-auto max-w-5xl">
-            <div className="rounded-2xl overflow-hidden relative bg-launchpad-dark-blue">
+            <div className="rounded-2xl overflow-hidden relative bg-launcherpad-dark-blue">
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 z-0">
                 <img
@@ -52,7 +52,7 @@ const Index = () => {
                   alt="Team Collaboration"
                   className="w-full h-full object-cover object-center opacity-50"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-launchpad-dark-blue via-launchpad-dark-blue/90 to-launchpad-dark-blue/80"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-launcherpad-dark-blue via-launcherpad-dark-blue/90 to-launcherpad-dark-blue/80"></div>
               </div>
 
               <div className="relative z-10 p-12 md:p-16 text-white">
@@ -63,7 +63,7 @@ const Index = () => {
                   viewport={{ once: true }}
                   className="max-w-lg"
                 >
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-launchpad-purple/20 text-launchpad-purple mb-6">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-launcherpad-purple/20 text-launcherpad-purple mb-6">
                     <Sparkles className="w-4 h-4 mr-2" />
                     <span className="text-sm font-medium font-inter tracking-wide">
                       Start Your AI Journey Today
@@ -77,7 +77,7 @@ const Index = () => {
                       Ignored{" "}
                     </span>
                     to
-                    <span className="text-launchpad-purple font-extrabold">
+                    <span className="text-launcherpad-purple font-extrabold">
                       {" "}
                       Influential
                     </span>
@@ -96,7 +96,7 @@ const Index = () => {
                       "AI-driven personalization at scale",
                     ].map((benefit, i) => (
                       <div key={i} className="flex items-center">
-                        <Check className="w-5 h-5 text-launchpad-purple mr-2 flex-shrink-0" />
+                        <Check className="w-5 h-5 text-launcherpad-purple mr-2 flex-shrink-0" />
                         <span className="text-gray-100 text-sm font-medium">
                           {benefit}
                         </span>
@@ -110,7 +110,7 @@ const Index = () => {
                     transition={{ delay: 0.3, duration: 0.5 }}
                     viewport={{ once: true }}
                     onClick={() => router.push("/assessment")}
-                    className="button-primary flex items-center text-lg px-8 py-4 shadow-lg shadow-launchpad-purple/10 hover:shadow-xl hover:shadow-launchpad-purple/20 rounded-full group"
+                    className="button-primary flex items-center text-lg px-8 py-4 shadow-lg shadow-launcherpad-purple/10 hover:shadow-xl hover:shadow-launcherpad-purple/20 rounded-full group"
                   >
                     Start Free – No Credit Card Needed
                     <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />

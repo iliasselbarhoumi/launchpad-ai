@@ -4,15 +4,19 @@ import { Badge } from "@/app/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 interface AssessmentStartProps {
+  isReady: boolean;
   onStart: () => void;
 }
 
-const AssessmentStart: React.FC<AssessmentStartProps> = ({ onStart }) => {
+const AssessmentStart: React.FC<AssessmentStartProps> = ({
+  isReady,
+  onStart,
+}) => {
   return (
     <div className="text-center">
       <Badge
         variant="secondary"
-        className="mb-4 bg-launchpad-purple/10 text-launchpad-purple border-launchpad-purple/20"
+        className="mb-4 bg-launcherpad-purple/10 text-launcherpad-purple border-launcherpad-purple/20"
       >
         Entrepreneurial Assessment
       </Badge>
@@ -25,11 +29,18 @@ const AssessmentStart: React.FC<AssessmentStartProps> = ({ onStart }) => {
         insights.
       </p>
       <Button
+        disabled={!isReady}
         onClick={onStart}
         size="lg"
-        className="bg-launchpad-purple hover:bg-launchpad-purple-hover hover-lift press-effect"
+        className="bg-launcherpad-purple hover:bg-launcherpad-purple-hover hover-lift press-effect"
       >
-        Start Assessment <ArrowRight className="ml-2" />
+        {!isReady ? (
+          "Preparing Assessment..."
+        ) : (
+          <>
+            Start Assessment <ArrowRight className="ml-2" />
+          </>
+        )}
       </Button>
     </div>
   );

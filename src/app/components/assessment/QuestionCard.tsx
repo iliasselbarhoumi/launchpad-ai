@@ -25,7 +25,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       <CardHeader className="text-center pb-4">
         <Badge
           variant="outline"
-          className="mx-auto mb-3 border-launchpad-purple/30 text-launchpad-purple bg-launchpad-purple/5 font-semibold"
+          className="mx-auto mb-3 border-launcherpad-purple/30 text-launcherpad-purple bg-launcherpad-purple/5 font-semibold"
         >
           {question.category}
         </Badge>

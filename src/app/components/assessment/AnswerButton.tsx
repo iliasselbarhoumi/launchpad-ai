@@ -25,8 +25,8 @@ const AnswerButton: React.FC<AnswerButtonProps> = ({
         justify-start p-4 h-auto text-left press-effect transition-all duration-200 w-full
         ${
           isSelected
-            ? "bg-launchpad-purple hover:bg-launchpad-purple/90 text-white shadow-lg shadow-launchpad-purple/20 animate-pulse-glow"
-            : "bg-white border-slate-200 hover:border-launchpad-purple/50 hover:bg-launchpad-purple/5"
+            ? "bg-launcherpad-purple hover:bg-launcherpad-purple/90 text-white shadow-lg shadow-launcherpad-purple/20 animate-pulse-glow"
+            : "bg-white border-slate-200 hover:border-launcherpad-purple/50 hover:bg-launcherpad-purple/5"
         }
       `}
     >
@@ -38,7 +38,7 @@ const AnswerButton: React.FC<AnswerButtonProps> = ({
         `}
         >
           {isSelected ? (
-            <CircleCheck className="h-4 w-4 text-launchpad-purple" />
+            <CircleCheck className="h-4 w-4 text-launcherpad-purple" />
           ) : (
             <span className="text-slate-500 font-semibold text-sm">
               {value}

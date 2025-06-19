@@ -63,7 +63,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        launchpad: {
+        launcherpad: {
           blue: "#2563EB",
           green: "#10B981",
           "dark-blue": "#222233",

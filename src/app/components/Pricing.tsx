@@ -33,17 +33,20 @@ const Pricing = () => {
   }, []);
 
   return (
-    <section className="relative py-20 bg-launchpad-light-gray/30" id="pricing">
+    <section
+      className="relative py-20 bg-launcherpad-light-gray/30"
+      id="pricing"
+    >
       <div className="container-section">
         <div
           ref={sectionRef}
           className="max-w-3xl mx-auto text-center opacity-0 transition-opacity duration-700"
         >
           <div className="section-tag">Pricing</div>
-          <h2 className="heading-lg text-launchpad-dark-blue mb-6">
+          <h2 className="heading-lg text-launcherpad-dark-blue mb-6">
             Simple, Transparent <span className="gradient-text">Pricing</span>
           </h2>
-          <p className="text-launchpad-dark-blue/70 text-lg mb-16 max-w-2xl mx-auto">
+          <p className="text-launcherpad-dark-blue/70 text-lg mb-16 max-w-2xl mx-auto">
             Choose the plan that best fits your team's needs. All plans include
             our core AI engagement features.
           </p>
@@ -54,19 +57,19 @@ const Pricing = () => {
           className="grid md:grid-cols-3 gap-8 opacity-0 translate-y-8 transition-all duration-700 delay-300"
         >
           {/* Starter Plan */}
-          <div className="bg-white rounded-2xl border border-launchpad-light-gray/60 p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-launchpad-cyan/5 hover:border-launchpad-cyan/20 hover:-translate-y-1">
-            <div className="text-xl font-bold text-launchpad-dark-blue mb-2">
+          <div className="bg-white rounded-2xl border border-launcherpad-light-gray/60 p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-launcherpad-cyan/5 hover:border-launcherpad-cyan/20 hover:-translate-y-1">
+            <div className="text-xl font-bold text-launcherpad-dark-blue mb-2">
               Starter
             </div>
-            <div className="text-launchpad-dark-blue/60 mb-6">
+            <div className="text-launcherpad-dark-blue/60 mb-6">
               For individual sales professionals
             </div>
 
             <div className="flex items-end mb-6">
-              <div className="text-4xl font-bold text-launchpad-dark-blue">
+              <div className="text-4xl font-bold text-launcherpad-dark-blue">
                 $49
               </div>
-              <div className="text-launchpad-dark-blue/60 ml-1 mb-1">
+              <div className="text-launcherpad-dark-blue/60 ml-1 mb-1">
                 /month
               </div>
             </div>
@@ -81,7 +84,9 @@ const Pricing = () => {
               ].map((feature, i) => (
                 <li key={i} className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-launchpad-dark-blue/80">{feature}</span>
+                  <span className="text-launcherpad-dark-blue/80">
+                    {feature}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -90,23 +95,23 @@ const Pricing = () => {
           </div>
 
           {/* Professional Plan */}
-          <div className="bg-white rounded-2xl border border-launchpad-cyan/30 p-8 shadow-xl shadow-launchpad-cyan/5 relative">
-            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-launchpad-cyan text-launchpad-dark-blue font-medium px-4 py-1 rounded-full text-sm">
+          <div className="bg-white rounded-2xl border border-launcherpad-cyan/30 p-8 shadow-xl shadow-launcherpad-cyan/5 relative">
+            <div className="absolute top-0 right-8 transform -translate-y-1/2 bg-launcherpad-cyan text-launcherpad-dark-blue font-medium px-4 py-1 rounded-full text-sm">
               Most Popular
             </div>
 
-            <div className="text-xl font-bold text-launchpad-dark-blue mb-2">
+            <div className="text-xl font-bold text-launcherpad-dark-blue mb-2">
               Professional
             </div>
-            <div className="text-launchpad-dark-blue/60 mb-6">
+            <div className="text-launcherpad-dark-blue/60 mb-6">
               For growing sales teams
             </div>
 
             <div className="flex items-end mb-6">
-              <div className="text-4xl font-bold text-launchpad-dark-blue">
+              <div className="text-4xl font-bold text-launcherpad-dark-blue">
                 $149
               </div>
-              <div className="text-launchpad-dark-blue/60 ml-1 mb-1">
+              <div className="text-launcherpad-dark-blue/60 ml-1 mb-1">
                 /month
               </div>
             </div>
@@ -122,7 +127,9 @@ const Pricing = () => {
               ].map((feature, i) => (
                 <li key={i} className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-launchpad-dark-blue/80">{feature}</span>
+                  <span className="text-launcherpad-dark-blue/80">
+                    {feature}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -131,16 +138,16 @@ const Pricing = () => {
           </div>
 
           {/* Enterprise Plan */}
-          <div className="bg-white rounded-2xl border border-launchpad-light-gray/60 p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-launchpad-cyan/5 hover:border-launchpad-cyan/20 hover:-translate-y-1">
-            <div className="text-xl font-bold text-launchpad-dark-blue mb-2">
+          <div className="bg-white rounded-2xl border border-launcherpad-light-gray/60 p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-launcherpad-cyan/5 hover:border-launcherpad-cyan/20 hover:-translate-y-1">
+            <div className="text-xl font-bold text-launcherpad-dark-blue mb-2">
               Enterprise
             </div>
-            <div className="text-launchpad-dark-blue/60 mb-6">
+            <div className="text-launcherpad-dark-blue/60 mb-6">
               For larger organizations
             </div>
 
             <div className="flex items-end mb-6">
-              <div className="text-4xl font-bold text-launchpad-dark-blue">
+              <div className="text-4xl font-bold text-launcherpad-dark-blue">
                 Custom
               </div>
             </div>
@@ -157,7 +164,9 @@ const Pricing = () => {
               ].map((feature, i) => (
                 <li key={i} className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-launchpad-dark-blue/80">{feature}</span>
+                  <span className="text-launcherpad-dark-blue/80">
+                    {feature}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -166,7 +175,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-launchpad-dark-blue to-launchpad-dark-blue/90 rounded-2xl p-8 md:p-12">
+        <div className="mt-16 bg-gradient-to-r from-launcherpad-dark-blue to-launcherpad-dark-blue/90 rounded-2xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm font-medium mb-4">
@@ -177,8 +186,8 @@ const Pricing = () => {
                 See How Launcherpad Works
               </h3>
               <p className="text-white/70 max-w-xl">
-                Get a personalized demo and see how Launcherpad can transform your
-                outbound strategy.
+                Get a personalized demo and see how Launcherpad can transform
+                your outbound strategy.
               </p>
             </div>
             <div>

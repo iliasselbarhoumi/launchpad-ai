@@ -54,11 +54,11 @@ const HowItWorks = () => {
       <div className="container-section py-4">
         <div className="max-w-3xl mx-auto text-center mb-6">
           <div className="section-tag">From Ignored to Trusted</div>
-          <h2 className="heading-lg text-launchpad-dark-blue mb-4">
+          <h2 className="heading-lg text-launcherpad-dark-blue mb-4">
             How <span className="gradient-text">Launcherpad</span> Works in 3
             Steps
           </h2>
-          <p className="text-launchpad-dark-blue/80 text-lg max-w-2xl mx-auto">
+          <p className="text-launcherpad-dark-blue/80 text-lg max-w-2xl mx-auto">
             Our AI-driven platform automates social engagement for your sales
             and GTM teams, transforming cold outreach into warm connections.
           </p>

@@ -20,7 +20,7 @@ const PlatformDemo = () => {
   return (
     <div className="relative max-w-5xl mx-auto mb-20">
       {/* Gradient background */}
-      <div className="absolute inset-0 -m-10 bg-gradient-to-br from-launchpad-purple/20 via-launchpad-purple/20 to-launchpad-purple/20 rounded-3xl blur-3xl opacity-40"></div>
+      <div className="absolute inset-0 -m-10 bg-gradient-to-br from-launcherpad-purple/20 via-launcherpad-purple/20 to-launcherpad-purple/20 rounded-3xl blur-3xl opacity-40"></div>
 
       <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 backdrop-blur-sm">
         {/* Platform UI Header - Tabs and Navigation */}
@@ -32,7 +32,7 @@ const PlatformDemo = () => {
           </div>
 
           <div className="flex space-x-1 overflow-x-auto scrollbar-hide">
-            <div className="px-4 py-2 text-launchpad-purple bg-launchpad-purple/10 rounded-t-lg font-medium text-sm border-b-2 border-launchpad-purple">
+            <div className="px-4 py-2 text-launcherpad-purple bg-launcherpad-purple/10 rounded-t-lg font-medium text-sm border-b-2 border-launcherpad-purple">
               Cues (24)
             </div>
             <div className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-t-lg font-medium text-sm">
@@ -73,15 +73,15 @@ const PlatformDemo = () => {
               {/* Prompt Area */}
               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-launchpad-purple/20 flex items-center justify-center">
-                    <User className="w-5 h-5 text-launchpad-purple" />
+                  <div className="w-10 h-10 rounded-full bg-launcherpad-purple/20 flex items-center justify-center">
+                    <User className="w-5 h-5 text-launcherpad-purple" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-700">
                       Hey Roy, I found a post that's relevant to your ICO with
                       65% match. What do you want me to do?
                     </p>
-                    <div className="mt-3 bg-launchpad-purple/5 p-3 rounded-lg">
+                    <div className="mt-3 bg-launcherpad-purple/5 p-3 rounded-lg">
                       <p className="text-xs text-gray-600 font-medium">
                         Generate an insightful comment about the market trends.
                       </p>
@@ -131,7 +131,7 @@ const PlatformDemo = () => {
                       <MessageCircle className="w-4 h-4" />
                       <span>38</span>
                     </div>
-                    <div className="ml-auto flex items-center space-x-1 bg-launchpad-purple/10 text-launchpad-purple px-2 py-1 rounded-md">
+                    <div className="ml-auto flex items-center space-x-1 bg-launcherpad-purple/10 text-launcherpad-purple px-2 py-1 rounded-md">
                       <Save className="w-4 h-4" />
                       <span className="text-xs font-medium">Save to Seeds</span>
                     </div>
@@ -141,7 +141,7 @@ const PlatformDemo = () => {
                   <div className="mt-4 relative">
                     <div className="flex items-center mb-2">
                       <div className="flex items-center bg-gray-100 px-2 py-1 rounded text-xs font-medium text-gray-600">
-                        <Sparkles className="w-3 h-3 mr-1 text-launchpad-purple" />
+                        <Sparkles className="w-3 h-3 mr-1 text-launcherpad-purple" />
                         Generated Comment
                       </div>
                       <div className="ml-2 text-xs text-gray-500">
@@ -170,16 +170,18 @@ const PlatformDemo = () => {
                 </div>
 
                 {/* Engagement Score */}
-                <div className="bg-launchpad-purple/5 p-4">
+                <div className="bg-launcherpad-purple/5 p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm font-medium text-gray-700">
                       Engagement Score
                     </span>
-                    <span className="text-launchpad-purple font-bold">+25</span>
+                    <span className="text-launcherpad-purple font-bold">
+                      +25
+                    </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div
-                      className="bg-launchpad-purple h-2 rounded-full"
+                      className="bg-launcherpad-purple h-2 rounded-full"
                       style={{ width: "75%" }}
                     ></div>
                   </div>
@@ -213,8 +215,8 @@ const PlatformDemo = () => {
                   Warmth Level
                 </h3>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-launchpad-purple rounded-full"></div>
-                  <span className="text-launchpad-purple font-medium">
+                  <div className="w-2 h-2 bg-launcherpad-purple rounded-full"></div>
+                  <span className="text-launcherpad-purple font-medium">
                     Warm
                   </span>
                 </div>
@@ -225,7 +227,7 @@ const PlatformDemo = () => {
                 <h3 className="text-sm font-medium text-gray-700 mb-3">
                   Previous Touchpoints
                 </h3>
-                <div className="text-launchpad-purple font-medium text-sm">
+                <div className="text-launcherpad-purple font-medium text-sm">
                   3 Interactions
                 </div>
               </div>
@@ -237,11 +239,11 @@ const PlatformDemo = () => {
                 </h3>
                 <div className="w-full bg-gray-200 rounded-full h-2 mb-1">
                   <div
-                    className="bg-launchpad-purple h-2 rounded-full"
+                    className="bg-launcherpad-purple h-2 rounded-full"
                     style={{ width: "85%" }}
                   ></div>
                 </div>
-                <div className="text-right text-sm font-medium text-launchpad-purple">
+                <div className="text-right text-sm font-medium text-launcherpad-purple">
                   85%
                 </div>
               </div>
@@ -252,8 +254,8 @@ const PlatformDemo = () => {
                   Relationship Status
                 </h3>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-launchpad-purple rounded-full"></div>
-                  <span className="text-launchpad-purple font-medium">
+                  <div className="w-2 h-2 bg-launcherpad-purple rounded-full"></div>
+                  <span className="text-launcherpad-purple font-medium">
                     Warm - 3 Previous Interactions
                   </span>
                 </div>
@@ -265,7 +267,7 @@ const PlatformDemo = () => {
                   Topics of Interest
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-launchpad-purple/10 text-launchpad-purple text-xs px-2 py-1 rounded-md">
+                  <span className="bg-launcherpad-purple/10 text-launcherpad-purple text-xs px-2 py-1 rounded-md">
                     AI Analytics
                   </span>
                   <span className="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded-md">
@@ -283,8 +285,8 @@ const PlatformDemo = () => {
                   Best Time to Engage
                 </h3>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-launchpad-purple" />
-                  <span className="text-launchpad-purple font-medium">
+                  <Clock className="w-4 h-4 text-launcherpad-purple" />
+                  <span className="text-launcherpad-purple font-medium">
                     Active Now
                   </span>
                 </div>
@@ -293,15 +295,15 @@ const PlatformDemo = () => {
               {/* Recommended Actions */}
               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                 <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center">
-                  <Sparkles className="w-4 h-4 text-launchpad-purple mr-1" />
+                  <Sparkles className="w-4 h-4 text-launcherpad-purple mr-1" />
                   Recommended Actions
                 </h3>
                 <div className="space-y-2">
-                  <button className="w-full bg-launchpad-purple text-white py-2 rounded-lg text-sm font-medium flex items-center justify-center">
+                  <button className="w-full bg-launcherpad-purple text-white py-2 rounded-lg text-sm font-medium flex items-center justify-center">
                     <Send className="w-4 h-4 mr-2" />
                     Send to Sequence
                   </button>
-                  <button className="w-full border border-launchpad-purple text-launchpad-purple py-2 rounded-lg text-sm font-medium flex items-center justify-center">
+                  <button className="w-full border border-launcherpad-purple text-launcherpad-purple py-2 rounded-lg text-sm font-medium flex items-center justify-center">
                     <User className="w-4 h-4 mr-2" />
                     Give to Agent
                   </button>

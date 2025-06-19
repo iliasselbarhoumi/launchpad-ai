@@ -25,9 +25,9 @@ const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
                   className="absolute inset-0 flex items-center"
                   aria-hidden="true"
                 >
-                  <div className="h-0.5 w-full bg-launchpad-purple" />
+                  <div className="h-0.5 w-full bg-launcherpad-purple" />
                 </div>
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-launchpad-purple hover:bg-launchpad-purple-hover">
+                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-launcherpad-purple hover:bg-launcherpad-purple-hover">
                   <Check className="h-5 w-5 text-white" aria-hidden="true" />
                 </div>
                 <span className="absolute -top-8 left-4 -translate-x-1/2 text-xs text-center w-32 hidden sm:block">
@@ -43,15 +43,15 @@ const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
                   <div className="h-0.5 w-full bg-gray-200" />
                 </div>
                 <div
-                  className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-launchpad-purple bg-white"
+                  className="relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-launcherpad-purple bg-white"
                   aria-current="step"
                 >
                   <span
-                    className="h-2.5 w-2.5 rounded-full bg-launchpad-purple"
+                    className="h-2.5 w-2.5 rounded-full bg-launcherpad-purple"
                     aria-hidden="true"
                   />
                 </div>
-                <span className="absolute -top-8 left-4 -translate-x-1/2 text-xs text-center w-32 text-launchpad-purple font-semibold hidden sm:block">
+                <span className="absolute -top-8 left-4 -translate-x-1/2 text-xs text-center w-32 text-launcherpad-purple font-semibold hidden sm:block">
                   {step.name}
                 </span>
               </>

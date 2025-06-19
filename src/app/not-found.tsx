@@ -25,10 +25,10 @@ const NotFound = () => {
             type: "spring",
             stiffness: 120,
           }}
-          className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-launchpad-purple/10 to-launchpad-purple-light/10"
+          className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-launcherpad-purple/10 to-launcherpad-purple-light/10"
         >
           <Unplug
-            className="h-10 w-10 text-launchpad-purple"
+            className="h-10 w-10 text-launcherpad-purple"
             strokeWidth={1.5}
           />
         </motion.div>

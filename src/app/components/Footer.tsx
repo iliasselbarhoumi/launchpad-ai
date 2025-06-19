@@ -13,7 +13,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="mb-6 md:mb-0"
           >
-            <h3 className="text-2xl font-bold text-launchpad-dark-blue">
+            <h3 className="text-2xl font-bold text-launcherpad-dark-blue">
               Launcherpad
             </h3>
             <p className="text-sm text-gray-600 mt-2">
@@ -30,19 +30,19 @@ const Footer = () => {
           >
             <a
               href="#"
-              className="text-gray-600 hover:text-launchpad-purple transition-colors"
+              className="text-gray-600 hover:text-launcherpad-purple transition-colors"
             >
               Privacy
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-launchpad-purple transition-colors"
+              className="text-gray-600 hover:text-launcherpad-purple transition-colors"
             >
               Terms
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-launchpad-purple transition-colors"
+              className="text-gray-600 hover:text-launcherpad-purple transition-colors"
             >
               Contact
             </a>

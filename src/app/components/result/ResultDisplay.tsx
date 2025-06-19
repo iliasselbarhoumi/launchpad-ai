@@ -26,7 +26,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ scores }) => {
     descriptionParts.length > 1 ? (
       <>
         {descriptionParts[0]}
-        <span className="font-bold bg-gradient-to-r from-launchpad-red to-launchpad-purple bg-clip-text text-transparent">
+        <span className="font-bold bg-gradient-to-r from-launcherpad-red to-launcherpad-purple bg-clip-text text-transparent">
           Launcherpad
         </span>
         {descriptionParts[1]}
@@ -54,12 +54,12 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ scores }) => {
         </CardHeader>
         <CardContent className="p-0 border-t grid md:grid-cols-2">
           <div className="text-center flex flex-col items-center justify-center p-8 lg:p-12 bg-slate-50 border-b md:border-b-0 md:border-r">
-            <h3 className="text-2xl font-bold text-launchpad-purple">
+            <h3 className="text-2xl font-bold text-launcherpad-purple">
               {archetype.title}
             </h3>
 
             <div className="relative my-6 flex items-center justify-center h-48 w-48">
-              <div className="absolute inset-0 bg-launchpad-purple/5 rounded-full animate-pulse-glow"></div>
+              <div className="absolute inset-0 bg-launcherpad-purple/5 rounded-full animate-pulse-glow"></div>
               <div className="relative text-8xl font-bold gradient-text">
                 {scores.totalPercentage}%
               </div>
@@ -76,7 +76,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ scores }) => {
               >
                 <Link href="/profile">
                   <span className="text-black">Start Your Journey with</span>{" "}
-                  <span className="bg-gradient-to-r from-launchpad-red to-launchpad-purple bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-launcherpad-red to-launcherpad-purple bg-clip-text text-transparent">
                     Launcherpad
                   </span>
                 </Link>

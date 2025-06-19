@@ -53,7 +53,7 @@ const IdeaCard: React.FC<IdeaCardProps> = ({ idea, view, index }) => {
             isGridView ? "h-32" : "sm:w-48 sm:h-auto flex-shrink-0"
           )}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-launchpad-purple/80 to-launchpad-purple-light/80 transition-all duration-500 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-gradient-to-br from-launcherpad-purple/80 to-launcherpad-purple-light/80 transition-all duration-500 group-hover:scale-110" />
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
@@ -64,7 +64,7 @@ const IdeaCard: React.FC<IdeaCardProps> = ({ idea, view, index }) => {
         </div>
 
         <div className="flex flex-col flex-grow p-4">
-          <CardTitle className="text-lg font-display font-semibold mb-2 group-hover:text-launchpad-purple transition-colors">
+          <CardTitle className="text-lg font-display font-semibold mb-2 group-hover:text-launcherpad-purple transition-colors">
             {idea.title}
           </CardTitle>
           <p className="text-slate-600 text-sm flex-grow mb-3">

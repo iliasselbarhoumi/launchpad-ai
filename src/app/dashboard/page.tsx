@@ -86,7 +86,7 @@ const Dashboard = () => {
             <div className="flex items-center space-x-4">
               <Avatar className="h-12 w-12 hover-lift">
                 <AvatarImage src={user?.imageUrl} alt={user?.fullName || ""} />
-                <AvatarFallback className="bg-gradient-to-r from-launchpad-purple to-launchpad-purple-light text-white font-semibold">
+                <AvatarFallback className="bg-gradient-to-r from-launcherpad-purple to-launcherpad-purple-light text-white font-semibold">
                   {user?.fullName}
                 </AvatarFallback>
               </Avatar>
@@ -118,7 +118,7 @@ const Dashboard = () => {
             <CardContent>
               <Progress
                 value={journeyProgress}
-                className="h-2 [&>div]:bg-gradient-to-r [&>div]:from-launchpad-purple [&>div]:to-launchpad-purple-light"
+                className="h-2 [&>div]:bg-gradient-to-r [&>div]:from-launcherpad-purple [&>div]:to-launcherpad-purple-light"
               />
               <p className="text-slate-600 text-sm mt-2">
                 {journeyProgress === 100

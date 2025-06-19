@@ -32,7 +32,7 @@ const GeneratingIdea = ({ progress }: { progress: number }) => {
           className="absolute inset-0 flex items-center justify-center opacity-20"
         >
           <Bot
-            className="w-24 h-24 text-launchpad-purple absolute"
+            className="w-24 h-24 text-launcherpad-purple absolute"
             style={{ transform: "translate(40px, -40px) rotate(45deg)" }}
           />
           <Bot
@@ -40,9 +40,9 @@ const GeneratingIdea = ({ progress }: { progress: number }) => {
             style={{ transform: "translate(-40px, 40px) rotate(-45deg)" }}
           />
         </motion.div>
-        <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center bg-gradient-to-br from-launchpad-purple/10 to-launchpad-purple-light/10 backdrop-blur-sm animate-pulse-glow">
+        <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center bg-gradient-to-br from-launcherpad-purple/10 to-launcherpad-purple-light/10 backdrop-blur-sm animate-pulse-glow">
           <Lightbulb
-            className="w-12 h-12 text-launchpad-purple animate-bounce-subtle"
+            className="w-12 h-12 text-launcherpad-purple animate-bounce-subtle"
             strokeWidth={1.5}
           />
         </div>

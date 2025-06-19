@@ -16,9 +16,9 @@ const GeneratingMvpPlan: React.FC<GeneratingMvpPlanProps> = ({ progress }) => {
       transition={{ duration: 0.5 }}
       className="text-center py-20 px-6 bg-white rounded-xl border border-slate-200/80 shadow-sm"
     >
-      <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-launchpad-purple/10 to-launchpad-purple-light/10">
+      <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-launcherpad-purple/10 to-launcherpad-purple-light/10">
         <Briefcase
-          className="w-10 h-10 text-launchpad-purple"
+          className="w-10 h-10 text-launcherpad-purple"
           strokeWidth={1.5}
         />
       </div>

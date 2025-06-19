@@ -165,7 +165,7 @@ const Navbar = () => {
                           src={user?.imageUrl}
                           alt={user?.fullName || ""}
                         />
-                        <AvatarFallback className="bg-gradient-to-r from-launchpad-purple to-launchpad-purple-light text-white font-semibold">
+                        <AvatarFallback className="bg-gradient-to-r from-launcherpad-purple to-launcherpad-purple-light text-white font-semibold">
                           {user?.firstName?.charAt(0).toUpperCase()}
                         </AvatarFallback>
                       </Avatar>

@@ -2,9 +2,9 @@ import React from "react";
 
 const PlatformDemoHeader = () => {
   return (
-    <div className="bg-launchpad-dark-blue/95 py-4 px-6 flex items-center justify-between border-b border-white/10">
+    <div className="bg-launcherpad-dark-blue/95 py-4 px-6 flex items-center justify-between border-b border-white/10">
       <div className="flex items-center space-x-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-launchpad-purple to-launchpad-purple flex items-center justify-center text-white">
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-launcherpad-purple to-launcherpad-purple flex items-center justify-center text-white">
           <svg
             width="20"
             height="20"
@@ -25,7 +25,7 @@ const PlatformDemoHeader = () => {
 
       <div className="flex items-center space-x-4">
         <span className="text-white/60 text-sm">Ryan Miller</span>
-        <div className="w-8 h-8 rounded-full bg-launchpad-purple/30 flex items-center justify-center text-white">
+        <div className="w-8 h-8 rounded-full bg-launcherpad-purple/30 flex items-center justify-center text-white">
           RM
         </div>
       </div>

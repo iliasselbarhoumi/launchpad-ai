@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sql } from "@/lib/db";
-import type { CreateFeedback, Feedback } from "@/lib/db";
+import { Question } from "@/app/components/assessment/questions";
 
 export async function GET(request: NextRequest) {
   try {
@@ -14,13 +14,13 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const feedback =
-      (await sql`SELECT * FROM feedback WHERE user_id = ${user_id} ORDER BY created_at DESC`) as Feedback[];
-    return NextResponse.json({ feedback });
+    const assessment =
+      await sql`SELECT * FROM assessment WHERE user_id = ${user_id} ORDER BY created_at DESC`;
+    return NextResponse.json({ assessment });
   } catch (error) {
     console.error("Database error:", error);
     return NextResponse.json(
-      { error: "Failed to fetch feedback" },
+      { error: "Failed to fetch assessment" },
       { status: 500 }
     );
   }
@@ -28,34 +28,35 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = (await request.json()) as CreateFeedback;
+    const body = await request.json();
 
-    if (!body.comments || body.comments.trim().length === 0) {
+    if (!body.userId) {
       return NextResponse.json(
-        { error: "Comment is required" },
+        { error: "User ID is required" },
         { status: 400 }
       );
     }
+    const initialStatus = "in_progress";
+    const answers = {};
+    const current_index = 0;
 
-    const result = (await sql`
-      INSERT INTO feedback (type, other_type_details, comments, rating, user_id)
-      VALUES (${body.type || null},${body.other_type_details || null} ,${
-      body.comments
-    },  ${body.rating || null}, ${body.user_id || "USER"})
-      RETURNING *
-    `) as Feedback[];
+    const result = await sql`
+      INSERT INTO assessment (user_id, status, answers, current_index)
+      VALUES (${body.userId},${initialStatus} ,${answers}, ${current_index})
+      RETURNING id
+    `;
 
     return NextResponse.json(
       {
         success: true,
-        feedback: result[0],
+        assessmentId: result,
       },
       { status: 201 }
     );
   } catch (error) {
     console.error("Database error:", error);
     return NextResponse.json(
-      { error: "Failed to save feedback" },
+      { error: "Failed to start assessment" },
       { status: 500 }
     );
   }

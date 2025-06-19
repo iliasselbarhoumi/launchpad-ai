@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { LucideIcon } from 'lucide-react';
+import React from "react";
+import { LucideIcon } from "lucide-react";
 
 interface StatCardProps {
   value: string;
@@ -16,13 +15,16 @@ const StatCard: React.FC<StatCardProps> = ({ value, description, icon }) => {
           {icon}
         </div>
         <div className="flex items-baseline gap-1">
-          <div className="text-5xl font-bold text-[#6936F5] font-inter relative z-10">{value}</div>
+          <div className="text-5xl font-bold text-[#6936F5] font-inter relative z-10">
+            {value}
+          </div>
         </div>
-        <div className="text-launchpad-dark-blue/80 mt-2 font-inter text-xl font-semibold relative z-10">
+        <div className="text-launcherpad-dark-blue/80 mt-2 font-inter text-xl font-semibold relative z-10">
           {description}
         </div>
-        <div className="text-launchpad-dark-blue/60 text-sm mt-2 relative z-10 leading-relaxed">
-          Turn cold prospects into warm leads through AI-driven social touchpoints
+        <div className="text-launcherpad-dark-blue/60 text-sm mt-2 relative z-10 leading-relaxed">
+          Turn cold prospects into warm leads through AI-driven social
+          touchpoints
         </div>
       </div>
     </div>

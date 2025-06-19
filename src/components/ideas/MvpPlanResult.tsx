@@ -263,7 +263,7 @@ const MvpPlanResult: React.FC<MvpPlanResultProps> = ({ idea, plan }) => {
                   className={cn(
                     "block py-2 px-3 rounded-md font-medium transition-colors text-base flex items-center gap-3",
                     activeSection === section.id
-                      ? "bg-launchpad-purple/10 text-launchpad-purple"
+                      ? "bg-launcherpad-purple/10 text-launcherpad-purple"
                       : "hover:bg-slate-100 text-slate-700"
                   )}
                   onClick={(e) => {
@@ -285,7 +285,7 @@ const MvpPlanResult: React.FC<MvpPlanResultProps> = ({ idea, plan }) => {
       <main className="flex-1 min-w-0">
         <Card className="overflow-hidden mb-8">
           <CardHeader className="bg-slate-50/70 border-b">
-            <p className="text-sm font-medium text-launchpad-purple">
+            <p className="text-sm font-medium text-launcherpad-purple">
               AI-Generated Business Plan
             </p>
             <CardTitle className="text-2xl md:text-3xl font-display font-bold">
@@ -362,7 +362,7 @@ const MvpPlanResult: React.FC<MvpPlanResultProps> = ({ idea, plan }) => {
                         {c.weaknesses}
                       </p>
                       <p className="mt-2 p-2 bg-slate-50 rounded">
-                        <strong className="font-semibold text-launchpad-purple">
+                        <strong className="font-semibold text-launcherpad-purple">
                           Gap / Opportunity:
                         </strong>{" "}
                         {c.gap}

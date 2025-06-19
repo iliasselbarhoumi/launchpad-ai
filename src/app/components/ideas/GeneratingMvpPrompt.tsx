@@ -31,14 +31,14 @@ const GeneratingMvpPrompt = ({ progress }: { progress: number }) => {
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          <LovableIcon className="w-20 h-20 text-launchpad-purple opacity-20" />
+          <LovableIcon className="w-20 h-20 text-launcherpad-purple opacity-20" />
         </motion.div>
-        <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center bg-gradient-to-br from-launchpad-purple/10 to-launchpad-purple-light/10">
+        <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center bg-gradient-to-br from-launcherpad-purple/10 to-launcherpad-purple-light/10">
           <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <LovableIcon className="w-12 h-12 text-launchpad-purple" />
+            <LovableIcon className="w-12 h-12 text-launcherpad-purple" />
           </motion.div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # 🚀 Launcherpad
 
-Launcherpad is an innovative platform that helps entrepreneurs and developers transform their ideas into viable Micro-SaaS products. Using AI-powered tools and a structured approach, Launchpad guides you through the entire journey from idea generation to MVP development.
+Launcherpad is an innovative platform that helps entrepreneurs and developers transform their ideas into viable Micro-SaaS products. Using AI-powered tools and a structured approach, Launcherpad guides you through the entire journey from idea generation to MVP development.
 
 ## 🌟 Features
 
@@ -43,8 +43,8 @@ Launcherpad is an innovative platform that helps entrepreneurs and developers tr
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/launchpad-ai.git
-cd launchpad-ai
+git clone https://github.com/yourusername/launcherpad-ai.git
+cd launcherpad-ai
 ```
 
 2. Install dependencies:
@@ -95,7 +95,7 @@ yarn dev
 ## 🏗️ Project Structure
 
 ```
-launchpad-ai/
+launcherpad-ai/
 ├── src/
 │   ├── api/           # API endpoints and services
 │   ├── components/    # Reusable UI components
@@ -151,7 +151,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you need help or have questions, please:
 
 - Open an issue in the GitHub repository
-- Contact our support team at support@launchpad-ai.com
+- Contact our support team at support@launcherpad-ai.com
 - Join our community Discord server
 
 ---

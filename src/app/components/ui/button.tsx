@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-gradient-to-r from-launchpad-purple to-launchpad-purple-light text-primary-foreground transition-opacity hover:opacity-90",
+          "bg-gradient-to-r from-launcherpad-purple to-launcherpad-purple-light text-primary-foreground transition-opacity hover:opacity-90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:

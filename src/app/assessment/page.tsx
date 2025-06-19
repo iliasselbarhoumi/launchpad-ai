@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import { questions } from "../components/assessment/questions";
+import { Question, questions } from "../components/assessment/questions";
 import ProgressBar from "../components/assessment/ProgressBar";
 import QuestionCard from "../components/assessment/QuestionCard";
 import AssessmentStart from "../components/assessment/AssessmentStart";
@@ -10,6 +10,7 @@ import AssessmentCompleted from "../components/assessment/AssessmentCompleted";
 import SectionTransition from "../components/assessment/SectionTransition";
 import { Button } from "../components/ui/button";
 import { useRouter } from "next/navigation";
+import { useUser } from "@clerk/nextjs";
 
 type AssessmentStatus =
   | "start"
@@ -19,13 +20,84 @@ type AssessmentStatus =
 
 const Assessment = () => {
   const router = useRouter();
+  const { user } = useUser();
   const [status, setStatus] = useState<AssessmentStatus>("start");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [direction, setDirection] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [assessmentId, setAssessmentId] = useState<string | null>(null);
+  const [assessment, setAssessment] = useState(null);
+
+  useEffect(() => {
+    getQuestions();
+    getAssessment();
+  }, []);
+
+  console.log("assessment", assessment);
+  console.log("assessmentId", assessmentId);
+
+  const getAssessment = async () => {
+    setLoading(true);
+    setError(null);
+    fetch(`/api/assessment?user_id=${user.id}`)
+      .then(async (res) => {
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || "Failed to fetch questions");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("data", data);
+        setAssessment(data.assessment[0]);
+        setAssessmentId(data.assessment[0].id);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  };
+
+  const getQuestions = async () => {
+    setLoading(true);
+    setError(null);
+    fetch(`/api/questions`)
+      .then(async (res) => {
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || "Failed to fetch questions");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setQuestions(data.questions);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  };
+
+  const startAssessment = async () => {
+    const res = await fetch("/api/assessment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId: user.id }),
+    });
+    const data = await res.json();
+    if (data.success) {
+      setAssessmentId(data.assessmentId);
+      setStatus("sectionTransition");
+    }
+  };
 
   const handleStart = () => {
-    setStatus("sectionTransition");
+    startAssessment();
   };
 
   const handleAnswer = (value: number) => {
@@ -126,6 +198,8 @@ const Assessment = () => {
     return null;
   };
 
+  console.log(answers);
+
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
       <div className="w-full max-w-4xl mx-auto">
@@ -137,7 +211,7 @@ const Assessment = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
             >
-              <AssessmentStart onStart={handleStart} />
+              <AssessmentStart isReady={!loading} onStart={handleStart} />
             </motion.div>
           )}
 
