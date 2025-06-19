@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Target, Users, LineChart } from "lucide-react";
 import StepContent from "./how-it-works/StepContent";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(1);
@@ -99,10 +100,13 @@ const HowItWorks = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <img
+                  <Image
                     src={step.gifUrl}
                     alt={`Step ${step.id}: ${step.title}`}
-                    className="w-full h-full object-cover object-center"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover object-center"
+                    unoptimized // Bypasses Next.js optimization and domain restrictions
                   />
                 </motion.div>
               ))}

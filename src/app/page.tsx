@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import ProblemStatement from "./components/ProblemStatement";
 import HowItWorks from "./components/HowItWorks";
 import Testimonials from "./components/Testimonials";
+import Image from "next/image";
 
 const Index = () => {
   const router = useRouter();
@@ -47,10 +48,14 @@ const Index = () => {
             <div className="rounded-2xl overflow-hidden relative bg-launcherpad-dark-blue">
               {/* Background Image with Overlay */}
               <div className="absolute inset-0 z-0">
-                <img
+                <Image
                   src="/lovable-uploads/eada8c8b-332c-4ac7-813d-42884f942368.png"
                   alt="Team Collaboration"
-                  className="w-full h-full object-cover object-center opacity-50"
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-center opacity-50"
+                  priority // Add this if it's above the fold
+                  quality={75} // Optimize quality vs file size
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-launcherpad-dark-blue via-launcherpad-dark-blue/90 to-launcherpad-dark-blue/80"></div>
               </div>

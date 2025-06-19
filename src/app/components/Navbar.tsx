@@ -31,6 +31,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { Badge } from "./ui/badge";
 import { useAuth } from "@/hooks/use-auth";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,10 +64,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img
+              <Image
                 src="/Logo_without_BG_Black.png"
                 alt="Launcherpad Logo"
-                className="h-10 md:h-10"
+                width={120}
+                height={40}
+                className="h-10 md:h-10 w-auto"
+                priority
               />
             </Link>
           </div>

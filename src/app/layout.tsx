@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Toaster as Sonner } from "./components/ui/sonner";
-import { Toaster } from "./components/ui/toaster";
+// import { Toaster } from "./components/ui/toaster";
 import ClientProviders from "./components/ClientProviders";
 import "./globals.css";
 
@@ -21,14 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ClientProviders>
           <div className="min-h-screen flex flex-col">
-            <Navbar />
+            {/* <Navbar /> */}
             <main className="flex-1 pt-16">{children}</main>
             <Footer />
           </div>
-          <Toaster />
+          {/* <Toaster /> */}
           <Sonner />
         </ClientProviders>
       </body>
